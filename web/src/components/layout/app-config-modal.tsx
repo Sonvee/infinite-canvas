@@ -354,7 +354,7 @@ export function AppConfigModal() {
             width={980}
             centered
             onCancel={() => setConfigDialogOpen(false)}
-            styles={{ body: { maxHeight: "72vh", overflowY: "auto", paddingRight: 12 } }}
+            styles={{ body: { overflowY: "auto", paddingRight: 12 } }}
             footer={null}
         >
             <AppConfigPanel showDoneButton initialTab={configTab} />

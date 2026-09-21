@@ -78,7 +78,7 @@ export function ConfigLocalStorage({ active }: { active: boolean }) {
                 ) : null}
             </section>
             {usage?.databases.map((database) => (
-                <section key={database.name} className="overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800">
+                <section key={database.name} className="max-h-[30vh] overflow-auto rounded-lg border border-stone-200 dark:border-stone-800">
                     <div className="flex items-center justify-between gap-3 border-b border-stone-200 px-4 py-3 dark:border-stone-800">
                         <div className="min-w-0">
                             <div className="truncate text-sm font-semibold">{t("config.localStorage.mainDatabase")}</div>

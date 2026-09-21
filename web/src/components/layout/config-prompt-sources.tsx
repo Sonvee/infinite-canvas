@@ -96,7 +96,7 @@ export function ConfigPromptSources() {
                 </Button>
             </div>
 
-            <div className="space-y-2">
+            <div className="max-h-[40vh] space-y-2 overflow-auto">
                 {sources.map((source) => {
                     const status = statusQuery.data?.[source.id];
                     return (
