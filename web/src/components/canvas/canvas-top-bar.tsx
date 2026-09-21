@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BookOpen, Bot, Download, Home, Images, Menu, PanelLeftClose, PanelLeftOpen, Plus, Redo2, Trash2, Undo2, Upload } from "lucide-react";
+import { ArrowBigLeft, BookOpen, Bot, Download, Home, Images, Menu, PanelLeftClose, PanelLeftOpen, Plus, Redo2, Trash2, Undo2, Upload } from "lucide-react";
 import { Button, Dropdown, Modal, Tooltip } from "antd";
 import { useTranslation } from "react-i18next";
 
@@ -19,6 +19,7 @@ export function CanvasTopBar({
     onCancelTitleEditing,
     canUndo,
     canRedo,
+    onBack,
     onHome,
     onProjects,
     onCreateProject,
@@ -41,6 +42,7 @@ export function CanvasTopBar({
     onCancelTitleEditing: () => void;
     canUndo: boolean;
     canRedo: boolean;
+    onBack: () => void;
     onHome: () => void;
     onProjects: () => void;
     onCreateProject: () => void;
@@ -84,6 +86,17 @@ export function CanvasTopBar({
                             style={{ color: theme.node.text }}
                         >
                             {sidePanelOpen ? <PanelLeftClose className="size-4" /> : <PanelLeftOpen className="size-4" />}
+                        </button>
+                    </Tooltip>
+                    <Tooltip title={t("canvas.backToProjects")}>
+                        <button
+                            type="button"
+                            onClick={onBack}
+                            aria-label={t("canvas.backToProjects")}
+                            className="grid size-7 place-items-center rounded-full transition hover:bg-black/5 dark:hover:bg-white/10"
+                            style={{ color: theme.node.text }}
+                        >
+                            <ArrowBigLeft className="size-4" />
                         </button>
                     </Tooltip>
                     <Dropdown

@@ -231,6 +231,7 @@ export default {
         emptyDescription: "Create a canvas to save its nodes, connections, and appearance independently.",
         collapsePanel: "Collapse panel",
         expandPanel: "Expand panel",
+        backToProjects: "Back to canvases",
         home: "Home",
         docs: "Documentation",
         projects: "My Canvases",

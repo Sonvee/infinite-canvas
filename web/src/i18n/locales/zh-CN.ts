@@ -231,6 +231,7 @@ export default {
         emptyDescription: "新建一个画布后，就可以独立保存节点、连线和画布外观。",
         collapsePanel: "收起面板",
         expandPanel: "展开面板",
+        backToProjects: "返回上一级",
         home: "主页",
         docs: "文档",
         projects: "我的画布",
