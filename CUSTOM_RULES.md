@@ -107,3 +107,23 @@
 - [ ] 已确认包含目标上游基线和全部所需定制功能。
 - [ ] 已核对 Feature Flag、环境变量、迁移和部署配置。
 - [ ] 已保留可回滚提交或标签，并记录未执行的验证项与已知风险。
+
+## 上传 docker 镜像
+
+```bash
+# 先登录 dockerhub
+docker login
+
+# 构建镜像 - 别忘了更新版本号，此处 1.0.1 仅示例
+docker build --platform linux/amd64 -t sonve/infinite-canvas:1.0.1 -t sonve/infinite-canvas:latest .
+
+# 上传镜像 - 别忘了更新版本号，此处 1.0.1 仅示例
+docker push sonve/infinite-canvas:1.0.1
+docker push sonve/infinite-canvas:latest
+
+# 服务器上拉取镜像
+docker compose pull
+
+# 服务器上构建镜像
+docker compose up -d --no-build --force-recreate
+```
