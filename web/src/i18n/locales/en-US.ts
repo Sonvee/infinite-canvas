@@ -582,6 +582,7 @@ export default {
             lastSynced: "Last synced {{time}}",
             neverSynced: "Not synced yet",
             url: "WebDAV URL",
+            urlDescription: "When using Nutstore, the default address is {{url}}",
             directory: "Remote directory",
             directoryDescription: "Business directories are created here, each containing {{manifest}} and files/",
             username: "Username",

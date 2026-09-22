@@ -582,6 +582,7 @@ export default {
             lastSynced: "上次同步 {{time}}",
             neverSynced: "尚未同步",
             url: "WebDAV 地址",
+            urlDescription: "使用坚果云时，默认地址为 {{url}}",
             directory: "远程目录",
             directoryDescription: "会在该目录下分业务目录保存，每个目录包含 {{manifest}} 和 files/",
             username: "用户名",

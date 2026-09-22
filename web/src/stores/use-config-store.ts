@@ -124,8 +124,10 @@ export const defaultConfig: AiConfig = {
     proxyUrl: DEFAULT_LOCAL_PROXY_URL,
 };
 
+export const DEFAULT_WEBDAV_URL = "https://canvas.sove.top/webdav/";
+
 export const defaultWebdavSyncConfig: WebdavSyncConfig = {
-    url: "",
+    url: DEFAULT_WEBDAV_URL,
     username: "",
     password: "",
     directory: "infinite-canvas",
