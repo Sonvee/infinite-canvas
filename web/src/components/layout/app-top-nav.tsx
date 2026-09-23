@@ -1,4 +1,4 @@
-import { Bot, Menu } from "lucide-react";
+import { Bot, Home, Menu } from "lucide-react";
 import { Button, Tooltip } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,7 @@ import { UserStatusActions } from "@/components/layout/user-status-actions";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { useAgentStore } from "@/stores/use-agent-store";
+import { OPENAI_BASE_URL } from "@/stores/use-config-store";
 
 export function AppTopNav() {
     const { t } = useTranslation();
@@ -79,6 +80,16 @@ export function AppTopNav() {
                                         </Link>
                                     );
                                 })}
+                                <a
+                                    href={OPENAI_BASE_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative flex h-14 shrink-0 items-center gap-2 text-sm leading-6 text-stone-500 transition hover:text-stone-950 dark:text-stone-400 dark:hover:text-stone-100"
+                                    aria-label={t("navigation.mainSite")}
+                                >
+                                    <Home className="size-4" />
+                                    <span className="truncate">{t("navigation.mainSite")}</span>
+                                </a>
                             </nav>
                         </div>
 

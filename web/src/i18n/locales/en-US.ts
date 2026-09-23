@@ -331,6 +331,7 @@ export default {
         prompts: "Prompt Library",
         assets: "My Assets",
         config: "Settings",
+        mainSite: "Main Site",
     },
     topNav: {
         openMenu: "Open navigation menu",

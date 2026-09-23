@@ -331,6 +331,7 @@ export default {
         prompts: "提示词库",
         assets: "我的资产",
         config: "配置",
+        mainSite: "主站",
     },
     topNav: {
         openMenu: "打开导航菜单",
